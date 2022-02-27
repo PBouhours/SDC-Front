@@ -34,10 +34,9 @@ function EventList() {
 
   useEffect(() => {
     if (localStorage.getItem('admin') === 'false') {
-      navigate('/mon-compte');
-    } else {
-      getEvents();
+      return navigate('/mon-compte');
     }
+    getEvents();
   }, [offset]);
   console.log(events);
 
