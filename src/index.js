@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import LoginUserContext from './contexts/LoginUserContext';
+import TokenContextProvider from './contexts/TokenUserContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TokenContextProvider>
+      <LoginUserContext>
+        <App />
+      </LoginUserContext>
+    </TokenContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
