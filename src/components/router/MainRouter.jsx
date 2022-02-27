@@ -63,7 +63,7 @@ function MainRouter() {
         <Route exact path="/stock/ajout-article" element={<CreateItem />} />
         <Route exact path="/evenements" element={<EventList />} />
         <Route path="/evenements/:id" element={<EventDetails />} />
-        <Route path="evenements/:id/vente/:idVente" element={<SaleEvent />} />
+        <Route path="/evenements/:id/vente/:idVente" element={<SaleEvent />} />
         <Route exact path="/articles-evenement" element={<StockEvent />} />
         <Route exact path="/gestion-utilisateurs" element={<UserManager />} />
         <Route exact path="/gestion-utilisateurs/creation" element={<CreateUser />} />
