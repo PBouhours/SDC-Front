@@ -3,7 +3,6 @@ import axios from '../../../axios-order';
 import { useState } from 'react/cjs/react.development';
 import Button from '../atoms/Button';
 import TextArea from '../atoms/TextArea';
-// import { useNavigate } from 'react-router-dom';
 
 function PopCreateEvent({ togglePop, refreshList }) {
   const [event, setEvent] = useState({
@@ -11,7 +10,6 @@ function PopCreateEvent({ togglePop, refreshList }) {
     date: '',
     fond_caisse: ''
   });
-  // const navigate = useNavigate();
 
   const inputGroupChangeHandler = (event) => {
     const { name, value } = event.target;
@@ -26,7 +24,6 @@ function PopCreateEvent({ togglePop, refreshList }) {
     const accepted = window.confirm(
       "Cet évènement va être ajouté à vos autres évènement. Voulez vous vraiment l'ajouter?"
     );
-    console.log(event);
     if (accepted) {
       axios
         .post('/events/addEvent', event)
@@ -49,7 +46,6 @@ function PopCreateEvent({ togglePop, refreshList }) {
           );
           togglePop();
         });
-      console.log(event);
     }
   }
 
