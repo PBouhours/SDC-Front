@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 function EventList() {
   const [statusPop, setStatusPop] = useState(false);
-  const [events, SetEvents] = useState([]);
+  const [events, setEvents] = useState([]);
   const [offset, setOffset] = useState(0);
   const [perPage] = useState(5);
   const [pageCount, setPageCount] = useState(0);
@@ -23,7 +23,7 @@ function EventList() {
     setOpen(data.find((el) => el.status));
     const endOffset = offset + perPage;
     const slice = data.reverse().slice(offset, endOffset);
-    SetEvents(slice);
+    setEvents(slice);
     setPageCount(Math.ceil(data.length / perPage));
   };
   const handlePageClick = (e) => {
