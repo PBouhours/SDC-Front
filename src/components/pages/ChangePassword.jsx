@@ -1,6 +1,6 @@
 import axios from '../../axios-order';
 import React from 'react';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 import Button from '../commons/atoms/Button';
 import MainLayout from '../layout/MainLayout';
 import { useNavigate } from 'react-router-dom';
