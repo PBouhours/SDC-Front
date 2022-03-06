@@ -21,7 +21,7 @@ function MenuAdmin({ statusBurger, toggleBurger }) {
   return (
     <div
       className={`${statusBurger ? '' : 'hidden'} bg-black h-screen w-11/12 flex justify-center `}>
-      <nav className="w-3/5 mt-24">
+      <nav className="w-4/5 mt-24">
         <ul className="flex flex-col w-full">
           <li className="mb-2">
             <Link
