@@ -1,10 +1,16 @@
+/* eslint-disable no-undef */
+/* eslint-disable prettier/prettier */
 import axios from '../../axios-order';
 import { useEffect, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
 import Button from '../commons/atoms/Button';
 import TextArea from '../commons/atoms/TextArea';
 import MainLayout from '../layout/MainLayout';
 import { useNavigate } from 'react-router-dom';
+import generator from 'generate-password';
+
+const { REACT_APP_MAIL_ID, REACT_APP_MAIL_ID_USER, REACT_APP_TEMPLATE_NEW_USER } = process.env;
 
 function CreateUser() {
   const navigate = useNavigate();
@@ -13,12 +19,15 @@ function CreateUser() {
     name: '',
     mail: '',
     admin: '',
-    actif: ''
+    actif: '',
+    password: generator.generate({
+      length: 10,
+      numbers: true
+    })
   });
 
   const inputGroupChangeHandler = (event) => {
     const { name, value } = event.target;
-    console.log(name);
     setUser((prevState) => ({
       ...prevState,
       [name]: value
@@ -27,18 +36,22 @@ function CreateUser() {
 
   function createUser() {
     const accepted = window.confirm('Cet utilisateur va être créé. Voulez vous vraiment le creer?');
-    console.log(user);
     if (accepted) {
       axios
         .post('/users/addUser', user)
         .then(() => {
+          emailjs.send(
+            REACT_APP_MAIL_ID,
+            REACT_APP_TEMPLATE_NEW_USER,
+            user,
+            REACT_APP_MAIL_ID_USER
+          );
           window.alert('utilisateur créé');
           navigate('/gestion-utilisateurs');
         })
         .catch(() => {
           window.alert('Utilisateur déjà existant');
         });
-      console.log(user);
     }
   }
 

@@ -10,7 +10,8 @@ function TextArea({
   name,
   grey,
   small,
-  verySmall
+  verySmall,
+  required
 }) {
   return (
     <input
@@ -25,6 +26,7 @@ function TextArea({
       } ${grey ? 'bg-gray-300' : ''}`}
       onChange={onChange}
       value={value}
+      required={required}
     />
   );
 }
