@@ -14,12 +14,15 @@ function Nav() {
   }
   return (
     <>
-      <div className="bg-black h-28 w-full flex items-center justify-between static border-b-2 border-red-500 ">
+      <div
+        className={`bg-black h-28 w-full flex items-center justify-between static border-b-2 ${
+          statusBurger ? 'border-green-500' : 'border-red-500'
+        } `}>
         <div className="w-28 h-20 bg-white border-solid border-2 border-red-700 rounded-full ml-3 flex items-center justify-center ">
           <h2 className="text-green-700 text-3xl">S.D.C</h2>
         </div>
         {!loginStatus ? (
-          <Link to="/connexion" className="text-green-500 mr-12 text-xl">
+          <Link to="/connexion" className="text-green-800 mr-12 text-xl">
             Connexion
           </Link>
         ) : (
@@ -50,7 +53,7 @@ function Nav() {
 
             <div className="mr-12 mt-4">
               <button type="button" onClick={toggleBurger}>
-                <Hamburger color="red" size="48" />
+                <Hamburger color={`${statusBurger ? 'red' : 'green'}`} size="48" />
               </button>
             </div>
           </div>
