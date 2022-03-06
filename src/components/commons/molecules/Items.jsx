@@ -30,7 +30,7 @@ function Items({
 
   return (
     <>
-      <div className="bg-gray-300 bg-opacity-50 h-24 w-4/5 rounded-xl mt-8 mb-2 text-white flex justify-between">
+      <div className="bg-gray-300 bg-opacity-50 h-24 w-11/12 rounded-xl mt-8 mb-2 text-white flex justify-between">
         <div className="flex justify-between">
           <div className="flex flex-col items-start justify-around ml-2">
             {stock ? (
@@ -42,7 +42,7 @@ function Items({
             )}
 
             <div className="flex">
-              <div className="flex flex-col items-start mr-1">
+              <div className="flex flex-col items-start mr-8">
                 <p>Taille: {size}</p>
                 <p>Ref: {référence}</p>
               </div>
