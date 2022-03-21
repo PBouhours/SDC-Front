@@ -58,7 +58,7 @@ function ProductInStore({ name, size, sexe, refe, quantity, price, id, refresh }
               value={changeQuantity}
               onChange={changeValue}
             />
-            <Button verySmall color="green" type="&#128504;" onClick={updateQuantity} />
+            <Button verySmall color="green" type="ok" onClick={updateQuantity} />
           </div>
         </div>
         <div id="price" className="w-1/4 relative flex flex-col justify-center">

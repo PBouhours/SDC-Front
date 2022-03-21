@@ -126,7 +126,7 @@ function Store() {
                       />
                     </div>
 
-                    <Button color="green" type="&#128504;" verySmall onClick={updateRemise} />
+                    <Button color="green" type="ok" verySmall onClick={updateRemise} />
                   </div>
                 </div>
                 <div className="w-1/4 flex flex-col justify-center">
