@@ -81,25 +81,25 @@ function UserItem(props) {
       </div>
       <div className="w-5/6 flex justify-around">
         <div className=" flex flex-col items-start">
-          <h1 className="text-white text-xl">Role:</h1>
+          <h1 className="text-white text-lg">Role:</h1>
           <div>
             <input type="radio" name="admin" onChange={inputGroupChangeHandler} value={1} />
-            <label className="text-xl"> Admin</label>
+            <label className="text-lg"> admin</label>
           </div>
           <div>
             <input type="radio" name="admin" onChange={inputGroupChangeHandler} value={0} />
-            <label className="text-xl"> Vendeur</label>
+            <label className="text-lg"> vendeur</label>
           </div>
         </div>
         <div className="flex flex-col items-start">
-          <h1 className="text-white text-xl">Status:</h1>
+          <h1 className="text-white text-lg">Status:</h1>
           <div>
             <input type="radio" name="actif" onChange={inputGroupChangeHandler} value={1} />
-            <label className="text-xl"> Actif</label>
+            <label className="text-lg"> actif</label>
           </div>
           <div>
             <input type="radio" name="actif" onChange={inputGroupChangeHandler} value={0} />
-            <label className="text-xl"> Bloqué</label>
+            <label className="text-lg"> bloqué</label>
           </div>
         </div>
         <Button color="green" type="Modifier" small onClick={updateUser} />
