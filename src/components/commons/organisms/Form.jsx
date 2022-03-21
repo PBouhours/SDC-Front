@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Form({ typeForm, id }) {
   const genre = ['', 'Homme', 'Femme', 'Enfant', 'Unisexe'];
-  const taille = ['', 'S', 'M', 'L', 'XL', '2XL'];
+  const taille = ['','2XS', 'XS', 'S', 'M', 'L', 'XL', '2XL','3XL', '4XL', 'bébé', '24-36 mois', '3/4 ans','5/6 ans','7/8 ans','9/11 ans','12/14 ans',];
   const type = ['', 'vêtement', 'goodies'];
 
   const navigate = useNavigate();

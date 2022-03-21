@@ -3,7 +3,25 @@ import Select from '../atoms/Select';
 
 function Filter({ changeSexe, changeSize, changeType, filterType }) {
   const gender = ['', 'Homme', 'Femme', 'Enfant', 'Unisexe'];
-  const size = ['', 'S', 'M', 'L', 'XL', '2XL'];
+  const size = [
+    '',
+    '2XS',
+    'XS',
+    'S',
+    'M',
+    'L',
+    'XL',
+    '2XL',
+    '3XL',
+    '4XL',
+    'bébé',
+    '24-36 mois',
+    '3/4 ans',
+    '5/6 ans',
+    '7/8 ans',
+    '9/11 ans',
+    '12/14 ans'
+  ];
   const type = ['Tous', 'vêtement', 'goodies'];
 
   return (
