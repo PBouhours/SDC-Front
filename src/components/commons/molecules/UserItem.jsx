@@ -102,7 +102,7 @@ function UserItem(props) {
             <label className="text-lg"> bloqué</label>
           </div>
         </div>
-        <Button color="green" type="Modifier" small onClick={updateUser} />
+        <Button color="green" type="Modifier" user onClick={updateUser} />
       </div>
       <div className="mr-2">
         {admin ? (
