@@ -10,7 +10,7 @@ function SaleItemUser({ id, date, nbProducts, eventName, solde }) {
       to={`/ventes-utilisateur/${id}`}
       className="bg-gray-500 rounded-xl text-white flex justify-around items-center p-4 w-5/6 mt-8">
       <div>
-        <h1 className="text-3xl">{eventName}</h1>
+        <h1 className="text-2xl text-black">{eventName}</h1>
         <h1>{newDate}</h1>
       </div>
       <div>

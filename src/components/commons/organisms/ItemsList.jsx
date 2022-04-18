@@ -9,7 +9,7 @@ import './pagination.css';
 function ItemsList({ stock, Type, Sexe, Size }) {
   const [offset, setOffset] = useState(0);
   const [products, SetProducts] = useState([]);
-  const [perPage] = useState(5);
+  const [perPage] = useState(2);
   const [pageCount, setPageCount] = useState(0);
 
   const getItems = async () => {
@@ -68,6 +68,8 @@ function ItemsList({ stock, Type, Sexe, Size }) {
         nextLabel={'>>'}
         breakLabel={'...'}
         breakClassName={'break-me'}
+        marginPagesDisplayed={1}
+        pageRangeDisplayed={1}
         pageCount={pageCount}
         onPageChange={handlePageClick}
         containerClassName={'pagination'}
@@ -75,6 +77,7 @@ function ItemsList({ stock, Type, Sexe, Size }) {
         activeClassName={'active'}
         renderOnZeroPageCount={null}
       />
+
       {products.map((el) => (
         <Items
           id={el.id}

@@ -79,6 +79,8 @@ function EventDetails() {
               breakLabel={'...'}
               breakClassName={'break-me'}
               pageCount={pageCount}
+              marginPagesDisplayed={1}
+              pageRangeDisplayed={1}
               onPageChange={handlePageClick}
               containerClassName={'pagination'}
               subContainerClassName={'pages pagination'}

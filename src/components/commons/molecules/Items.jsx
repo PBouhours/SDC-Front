@@ -35,10 +35,10 @@ function Items({
           <div className="flex flex-col items-start justify-around ml-2">
             {stock ? (
               <Link to={`/stock/${id}`}>
-                <h1 className="text-2xl">{name}</h1>
+                <h1 className="text-xl">{name}</h1>
               </Link>
             ) : (
-              <h1 className="text-2xl">{name}</h1>
+              <h1 className="text-xl">{name}</h1>
             )}
 
             <div className="flex">
