@@ -9,7 +9,7 @@ import './pagination.css';
 function ItemsList({ stock, Type, Sexe, Size }) {
   const [offset, setOffset] = useState(0);
   const [products, SetProducts] = useState([]);
-  const [perPage] = useState(2);
+  const [perPage] = useState(5);
   const [pageCount, setPageCount] = useState(0);
 
   const getItems = async () => {
