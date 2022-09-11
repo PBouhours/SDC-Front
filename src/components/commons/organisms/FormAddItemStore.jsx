@@ -29,17 +29,19 @@ function FormAddItemStore({
   };
 
   function addProductInStore() {
-    axios
-      .post('/products/addProductInSale', quantity)
-      .then(() => {
-        window.alert('Cet Article va être mis dans votre panier');
-        togglePopAddStore();
-        refreshList();
-      })
-      .catch(() => {
-        window.alert("impossible d'ajouter cette article au panier");
-        togglePopAddStore();
-      });
+    const accepte = window.confirm('Voulez vous vraiment ajouter cet article a votre panier?');
+    if (accepte) {
+      axios
+        .post('/products/addProductInSale', quantity)
+        .then(() => {
+          togglePopAddStore();
+          refreshList();
+        })
+        .catch(() => {
+          window.alert("impossible d'ajouter cette article au panier");
+          togglePopAddStore();
+        });
+    }
   }
   return (
     <div

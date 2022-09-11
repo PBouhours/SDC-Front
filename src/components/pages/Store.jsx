@@ -74,6 +74,17 @@ function Store() {
     }
   };
 
+  const AnnulationStore = () => {
+    const validation = window.confirm(
+      'voulez vous vraiment annuler ce panier ? Vous serez obligé de recommencer vôtre panier'
+    );
+    if (validation) {
+      axios.post(`/products/annulation-sale/${sale.id}`, sale).then(() => {
+        navigate('/articles-evenement');
+      });
+    }
+  };
+
   useEffect(() => {
     getStore();
   }, []);
@@ -137,6 +148,9 @@ function Store() {
             </div>
             <div className="flex justify-end w-9/12">
               <Button color="green" type="Valider la vente" onClick={validationStore} />
+            </div>
+            <div className="flex justify-end w-9/12">
+              <Button color="red" type="Annuler la vente" onClick={AnnulationStore} />
             </div>
           </div>
         )}
